@@ -1,32 +1,35 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code2, Database, GitGraphIcon as Git, Layout, Server, Users } from 'lucide-react'
+import { 
+  Code2, Database, GitGraphIcon as Git, Layout, Server, 
+  Users, Cpu, BrainCircuit, FileCode2, Container, 
+  Github, Terminal, Binary, Laptop, Video
+} from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Progress } from '@/components/ui/progress'
 
 const skills = {
   'Programming Languages': [
-    { name: 'Python', level: 90, icon: Code2 },
-    { name: 'C', level: 85, icon: Code2 },
-    { name: 'C++', level: 80, icon: Code2 },
-    { name: 'Java', level: 75, icon: Code2 },
+    { name: 'Python', icon: Terminal },
+    { name: 'C', icon: FileCode2 },
+    { name: 'C++', icon: Code2 },
+    { name: 'Java', icon: Binary },
   ],
   'Machine Learning': [
-    { name: 'TensorFlow', level: 85, icon: Server },
-    { name: 'Basic Algorithms', level: 80, icon: Server },
+    { name: 'TensorFlow', icon: BrainCircuit },
+    { name: 'ML Algorithms', icon: Cpu },
   ],
   'Databases & Version Control': [
-    { name: 'MySQL', level: 75, icon: Database },
-    { name: 'MongoDB', level: 70, icon: Database },
-    { name: 'Git', level: 85, icon: Git },
-    { name: 'GitHub', level: 85, icon: Git },
+    { name: 'MySQL', icon: Database },
+    { name: 'MongoDB', icon: Container },
+    { name: 'Git', icon: Git },
+    { name: 'GitHub', icon: Github },
   ],
   'Other Skills': [
-    { name: 'Windows', level: 90, icon: Layout },
-    { name: 'Linux', level: 80, icon: Layout },
-    { name: 'Team Work', level: 95, icon: Users },
-    { name: 'Creative Thinking', level: 90, icon: Users },
+    { name: 'Windows', icon: Layout },
+    { name: 'Linux', icon: Server },
+    { name: 'Team Work', icon: Users },
+    { name: 'Video Editing', icon: Video },
   ],
 }
 
@@ -72,24 +75,22 @@ export function Skills() {
                     {category}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  {skillList.map((skill) => (
-                    <div key={skill.name} className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <skill.icon className="h-4 w-4 text-purple-500" />
-                          <span className="text-sm font-medium text-gray-200">
-                            {skill.name}
-                          </span>
+                <CardContent>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                    {skillList.map((skill) => (
+                      <div 
+                        key={skill.name} 
+                        className="flex flex-col items-center justify-center gap-2 group"
+                      >
+                        <div className="p-4 rounded-full bg-purple-500/10 group-hover:bg-purple-500/20 transition-colors">
+                          <skill.icon className="h-8 w-8 text-purple-500" />
                         </div>
-                        <span className="text-sm text-gray-400">{skill.level}%</span>
+                        <span className="text-sm text-gray-400 group-hover:text-gray-200 transition-colors">
+                          {skill.name}
+                        </span>
                       </div>
-                      <Progress
-                        value={skill.level}
-                        className="h-2 bg-purple-500/20 [&>div]:bg-gradient-to-r [&>div]:from-purple-500 [&>div]:to-cyan-500"
-                      />
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>

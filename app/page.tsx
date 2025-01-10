@@ -4,6 +4,7 @@ import { Hero } from '@/components/hero'
 import { HireMe } from '@/components/hire-me'
 import { Projects } from '@/components/projects'
 import { Skills } from '@/components/skills'
+import { Activities } from '@/components/activities'
 
 export default function Home() {
   return (
@@ -11,7 +12,10 @@ export default function Home() {
       <Hero />
       <Skills />
       <Experience />
-      <Projects />
+      <div className="flex flex-col gap-24">
+        <Projects />
+        <Activities />
+      </div>
       <HireMe />
       <Contact />
     </div>

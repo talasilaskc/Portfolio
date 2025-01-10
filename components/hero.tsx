@@ -14,7 +14,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent"
         >
-          AI & ML Enthusiast
+          Sri Krishna Chaitanya Talasila
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto"
         >
-          Dedicated to leveraging technology for impactful solutions in agriculture and renewable energy
+           An AI & ML enthusiast passionate about solving real-world challenges with innovative technology. I'm curious about creating impactful solutions in agriculture, renewable energy, and beyond.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

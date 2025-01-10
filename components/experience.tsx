@@ -5,25 +5,36 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 const experiences = [
   {
-    title: 'B.Tech in VNR VJIET',
-    date: '2022 - Present',
-    description: 'Pursuing CSE with a current CGPA of 8.99 (5th semester)',
+    title: 'B.Tech in Computer Science',
+    institution: 'VNR VJIET',
+    period: '2022 - Present',
+    description: 'Pursuing CSE with a current CGPA of 8.66 (6th semester)',
     achievements: [
-      'Finalist in AI system development for solar cell health checks',
-      'Advanced to second round in Turing Cup coding contest',
-      'Finalist in Hack4SDG at IIT Hyderabad',
-    ],
+      'Active member of various technical clubs',
+      'Participated in multiple hackathons and coding competitions',
+      'Maintained consistent academic performance'
+    ]
   },
   {
-    title: 'Computer Society of India (CSI)',
-    date: '2022 - 2023',
-    description: 'Active Member',
+    title: 'Intermediate Education',
+    institution: 'Sri Chaitanya Junior College',
+    period: '2020 - 2022',
+    description: ' Successfully completed intermediate education with good academic performance, demonstrating a strong aptitude in mathematics, physics, and chemistry.',
     achievements: [
-      'Participated in technical events and workshops',
-      'Contributed to community projects',
-      'Collaborated with team members on various initiatives',
-    ],
+      'Passed out with 97.1 percentage in board exams',
+      'Secured 1786 rank in TSEAMCET',
+      'Achieved 97.1 percentile in JEE Mains'
+    ]
   },
+  {
+    title: '10th Education',
+    institution: 'Sri Chaitanya School',
+    period: '2019 - 2020',
+    description: 'Successfully completed 10th grade with excellent academic performance, showcasing strong proficiency in core subjects.',
+    achievements: [
+      'Passed out with 10 GPA in board exams'
+    ]
+  }
 ]
 
 const container = {
@@ -43,7 +54,7 @@ const item = {
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24">
+    <section id="education" className="py-24">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +62,7 @@ export function Experience() {
           viewport={{ once: true }}
           className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent"
         >
-          Experience & Education
+          Education
         </motion.h2>
         <motion.div
           variants={container}
@@ -71,15 +82,18 @@ export function Experience() {
                   <CardTitle className="text-xl font-semibold text-gray-200">
                     {exp.title}
                   </CardTitle>
-                  <p className="text-sm text-purple-500">{exp.date}</p>
+                  <p className="text-purple-500">{exp.institution}</p>
+                  <p className="text-sm text-gray-400">{exp.period}</p>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">{exp.description}</p>
-                  <ul className="list-disc list-inside space-y-2 text-gray-400">
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i}>{achievement}</li>
-                    ))}
-                  </ul>
+                  {exp.achievements && (
+                    <ul className="list-disc list-inside space-y-2 text-gray-400">
+                      {exp.achievements.map((achievement, i) => (
+                        <li key={i}>{achievement}</li>
+                      ))}
+                    </ul>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>

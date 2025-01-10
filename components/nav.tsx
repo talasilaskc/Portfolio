@@ -8,8 +8,9 @@ import { usePathname } from 'next/navigation'
 const links = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
+  { name: 'Education', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Activities & Involvement', href: '#activities' },
   { name: 'Why Hire Me?', href: '#hire-me' },
   { name: 'Contact', href: '#contact' },
 ]
@@ -26,7 +27,7 @@ export function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent"
           >
-            Sri Krishna Chaitanya
+            My Portfolio
           </motion.div>
           <div className="hidden md:flex items-center gap-8">
             {links.map((link) => (
