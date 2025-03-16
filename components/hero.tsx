@@ -19,7 +19,7 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-10 lg:px-20 relative bg-black">
+    <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-10 lg:px-20 relative">
       {/* Left Side Content */}
       <div className="max-w-2xl text-center md:text-left">
         <motion.h1
