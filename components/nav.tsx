@@ -6,9 +6,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const links = [
-  { name: 'About', href: '#about' },
+  { name: 'About', href: '#hero' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Education', href: '#experience' },
+  { name: 'Education', href: '#education' },
   { name: 'Projects', href: '#projects' },
   { name: 'Activities & Involvement', href: '#activities' },
   { name: 'Why Hire Me?', href: '#hire-me' },
